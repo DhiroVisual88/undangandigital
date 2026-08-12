@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>50th Birthday Celebration</title>
+<meta name="description" content="You are invited to celebrate a milestone 50th birthday.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="50th Birthday Celebration">
+<meta property="og:description" content="Join us to celebrate this special milestone.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Floating music control -->
+<button id="musicToggle" class="music-btn" aria-label="Play background music" aria-pressed="false">
+  <svg class="icon-note" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/>
+  </svg>
+</button>
+<audio id="bgMusic" loop preload="none">
+  <source src="assets/music/invitation-music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ============ OPENING COVER ============ -->
+<section id="cover" class="cover">
+  <div class="cover-frame">
+    <p class="cover-eyebrow" data-anim="fade-up">You are cordially invited</p>
+    <h1 class="cover-title" data-anim="fade-up" data-delay="1">50<span class="ordinal">th</span><br>Birthday Celebration</h1>
+    <div class="cover-rule" data-anim="fade-up" data-delay="2"></div>
+    <p class="cover-name" id="coverName" data-anim="fade-up" data-delay="2">XXX</p>
+    <p class="cover-date" data-anim="fade-up" data-delay="3">5 September 2026</p>
+    <button id="openInvitation" class="btn-open" data-anim="fade-up" data-delay="4">
+      <span>Open Invitation</span>
+    </button>
+  </div>
+  <div class="cover-bg" aria-hidden="true"></div>
+</section>
+
+<!-- ============ MAIN CONTENT (hidden until opened) ============ -->
+<main id="mainContent" class="main-content" hidden>
+
+  <!-- Welcome -->
+  <section class="section welcome" data-reveal>
+    <div class="container narrow">
+      <p class="eyebrow">Welcome</p>
+      <p class="welcome-text">
+        Five decades of beautiful memories, countless moments of love, and a lifetime
+        of stories worth celebrating.
+      </p>
+      <p class="welcome-text welcome-text--sub">
+        Join us as we celebrate <span class="name-inline" data-field="birthdayPerson">XXX</span>'s 50th birthday —
+        an evening of good food, warm company, and gratitude for the years behind us
+        and those still to come.
+      </p>
+    </div>
+  </section>
+
+  <!-- Birthday Person -->
+  <section class="section person" data-reveal>
+    <div class="container">
+      <div class="person-grid">
+        <div class="person-photo">
+          <div class="photo-frame">
+            <img src="assets/images/celebrant.jpg" alt="Portrait of the birthday celebrant"
+                 loading="lazy" width="800" height="1000"
+                 onerror="this.parentElement.classList.add('photo-frame--empty'); this.remove();">
+            <div class="photo-frame-caption">A milestone worth celebrating</div>
+          </div>
+        </div>
+        <div class="person-copy">
+          <p class="eyebrow">Guest of Honour</p>
+          <h2 class="person-name" data-field="birthdayPerson">XXX</h2>
+          <p class="person-sub">50th Birthday Celebration</p>
+          <div class="thin-rule"></div>
+          <p class="person-text">
+            An intimate evening by the water, surrounded by family and the people who
+            have shaped these fifty remarkable years. We would be honoured to have you
+            join us at the table.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Countdown -->
+  <section class="section countdown-section" data-reveal>
+    <div class="container narrow">
+      <p class="eyebrow eyebrow--light">Counting Down To</p>
+      <h2 class="section-title section-title--light">The Celebration</h2>
+      <div id="countdown" class="countdown" role="timer" aria-live="polite" aria-label="Countdown to the celebration">
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-days">00</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-sep" aria-hidden="true">:</div>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-hours">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-sep" aria-hidden="true">:</div>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-minutes">00</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-sep" aria-hidden="true">:</div>
+        <div class="countdown-unit">
+          <span class="countdown-num" id="cd-seconds">00</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+      <p id="countdownEnded" class="countdown-ended" hidden>The celebration has begun! 🎉</p>
+    </div>
+  </section>
+
+  <!-- Event Details -->
+  <section class="section details" data-reveal>
+    <div class="container narrow">
+      <p class="eyebrow">Details</p>
+      <h2 class="section-title">The Celebration</h2>
+
+      <div class="menu-card">
+        <div class="detail-row">
+          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 2v4M16 2v4M3.5 9h17M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <p class="detail-label">Date</p>
+            <p class="detail-value" data-field="dateDisplay">5 September 2026</p>
+          </div>
+        </div>
+        <div class="detail-row">
+          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <p class="detail-label">Time</p>
+            <p class="detail-value">6:00 PM WIB</p>
+          </div>
+        </div>
+        <div class="detail-row">
+          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.4"/></svg>
+          <div>
+            <p class="detail-label">Venue</p>
+            <p class="detail-value" data-field="venue">Bandar Djakarta Alam Sutera</p>
+            <p class="detail-value detail-value--muted" data-field="address">Flavor Bliss.3, Jl. Alam Sutera Boulevard Blok Kavling No.6, Pakulonan, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15325</p>
+          </div>
+        </div>
+      </div>
+
+      <button id="saveDateBtn" class="btn-primary btn-block">Save the Date</button>
+    </div>
+  </section>
+
+  <!-- Venue / Map -->
+  <section class="section venue" data-reveal>
+    <div class="container narrow">
+      <p class="eyebrow">Location</p>
+      <h2 class="section-title">Where We Celebrate</h2>
+      <div class="venue-card">
+        <p class="venue-name" data-field="venue">Bandar Djakarta Alam Sutera</p>
+        <p class="venue-address" data-field="address">Flavor Bliss.3, Jl. Alam Sutera Boulevard Blok Kavling No.6, Pakulonan, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15325</p>
+        <a id="mapsLink" class="btn-secondary btn-block" href="#" target="_blank" rel="noopener noreferrer">View Location</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="section rsvp" data-reveal>
+    <div class="container narrow">
+      <p class="eyebrow">RSVP</p>
+      <h2 class="section-title">Will You Join Us?</h2>
+      <p class="section-subtitle">Your presence would make this celebration even more special.</p>
+
+      <form id="rsvpForm" class="rsvp-form" novalidate>
+        <div class="field">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" maxlength="100" required autocomplete="name">
+        </div>
+
+        <fieldset class="field">
+          <legend>Will you attend?</legend>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="attendance" value="Attending" required checked>
+              <span>Attending</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="attendance" value="Not Attending">
+              <span>Not Attending</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="guestCount">Number of Guests (including yourself)</label>
+          <input type="number" id="guestCount" name="guestCount" min="1" max="10" value="1" inputmode="numeric">
+        </div>
+
+        <div class="field">
+          <label for="message">Birthday Wishes / Message</label>
+          <textarea id="message" name="message" rows="4" maxlength="500" placeholder="Share a wish for this special milestone..."></textarea>
+          <span class="char-count"><span id="charCount">0</span>/500</span>
+        </div>
+
+        <button type="submit" id="submitRsvp" class="btn-primary btn-block">
+          <span class="btn-text">Send RSVP</span>
+          <span class="btn-spinner" hidden aria-hidden="true"></span>
+        </button>
+
+        <p id="rsvpError" class="form-error" role="alert" hidden></p>
+      </form>
+
+      <div id="rsvpSuccess" class="rsvp-success" hidden role="status">
+        <svg viewBox="0 0 24 24" fill="none" class="success-icon" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.4"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p class="success-title">Thank you!</p>
+        <p class="success-text">Your response has been recorded. See you at the celebration! 🎉</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Birthday Wishes -->
+  <section class="section wishes" data-reveal>
+    <div class="container narrow">
+      <p class="eyebrow">From Our Guests</p>
+      <h2 class="section-title">Birthday Wishes</h2>
+      <p class="section-subtitle">Leave a little love for <span data-field="birthdayPerson">XXX</span> on this special milestone.</p>
+
+      <div id="wishesList" class="wishes-list" aria-live="polite">
+        <p class="wishes-loading" id="wishesLoading">Loading wishes…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gift -->
+  <section class="section gift" data-reveal>
+    <div class="container narrow">
+      <p class="eyebrow">A Small Note</p>
+      <h2 class="section-title">Wanna give us some gifts?</h2>
+      <p class="gift-intro">
+        Your presence is truly the only gift we ask for. For those who wish to send a
+        token of love, a small note is shared below.
+      </p>
+      <div class="menu-card gift-card">
+        <div class="gift-row">
+          <p class="detail-label">Bank Account Number</p>
+          <div class="gift-account">
+            <span id="accountNumber" data-field="bankAccount">1234 5678 9012</span>
+            <button id="copyAccountBtn" class="btn-copy" aria-label="Copy account number">Copy Account Number</button>
+          </div>
+          <p id="copyConfirm" class="copy-confirm" hidden>Account number copied!</p>
+        </div>
+        <div class="gift-row">
+          <p class="detail-label">Gift Delivery Address</p>
+          <p class="detail-value" data-field="giftAddress">XXX</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <section class="section closing" data-reveal>
+    <div class="container narrow">
+      <div class="closing-frame">
+        <p class="closing-text">
+          Thank you for being part of this special milestone. Your presence, prayers,
+          love, and warm wishes mean more than words can say.
+        </p>
+        <p class="closing-date">See you on 5 September 2026</p>
+        <p class="closing-signature">With love,<br><span data-field="birthdayPerson">XXX</span> &amp; Family</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Made with love for a milestone worth remembering.</p>
+  </footer>
+
+</main>
+
+<script src="script.js" defer></script>
+</body>
+</html>
