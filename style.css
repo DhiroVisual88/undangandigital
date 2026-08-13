@@ -12,6 +12,7 @@
   --gold: #A88856;
   --gold-light: #C7AD7C;
   --white: #FFFFFF;
+   --red: #f5d7d5;
   --line: rgba(36,34,32,0.14);
   --line-on-dark: rgba(247,243,236,0.22);
    
@@ -101,7 +102,7 @@ button{ font-family: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, var(--charcoal) 0%, #2E2B27 55%, var(--charcoal) 100%);
+  background: linear-gradient(180deg, var(--red) 0%, #2E2B27 55%, var(--white) 100%);
   color: var(--ivory);
   overflow: hidden;
   padding: 40px 24px;
