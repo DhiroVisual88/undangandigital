@@ -102,8 +102,8 @@ button{ font-family: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, var(--red) 0%, #2E2B27 55%, var(--white) 100%);
-  color: var(--red);
+  background: linear-gradient(180deg, var(--red) 0%, #2E2B27 55%, var(--red) 100%);
+  color: var(--white);
   overflow: hidden;
   padding: 40px 24px;
 }
