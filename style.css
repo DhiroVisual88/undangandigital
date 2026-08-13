@@ -103,7 +103,7 @@ button{ font-family: inherit; cursor: pointer; }
   align-items: center;
   justify-content: center;
   background: linear-gradient(180deg, var(--red) 0%, #2E2B27 55%, var(--white) 100%);
-  color: var(--ivory);
+  color: var(--red);
   overflow: hidden;
   padding: 40px 24px;
 }
