@@ -213,7 +213,7 @@ button{ font-family: inherit; cursor: pointer; }
   padding: 84px 0;
 }
 
-.welcome{ background: var(--ivory); }
+.welcome{ background: var(--charcoal); }
 .welcome-text{
   font-family: var(--font-display);
   font-size: clamp(1.15rem, 3.2vw, 1.5rem);
