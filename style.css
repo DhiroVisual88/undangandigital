@@ -4,17 +4,17 @@
    ============================================================ */
 
 :root{
-  --ivory: #9e0b0b;
+   --ivory: #F7F3EC;
   --ivory-deep: #F0E9DC;
   --champagne: #D9C9A8;
-  --charcoal: #f0f0f0;
-  --charcoal-soft: #ffffff;
+  --charcoal: #242220;
+  --charcoal-soft: #3A3733;
   --gold: #A88856;
   --gold-light: #C7AD7C;
   --white: #FFFFFF;
   --line: rgba(36,34,32,0.14);
   --line-on-dark: rgba(247,243,236,0.22);
-
+   
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
