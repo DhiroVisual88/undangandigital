@@ -4,7 +4,7 @@
    ============================================================ */
 
 :root{
-   --ivory: #F7F3EC;
+  --ivory: #F7F3EC;
   --ivory-deep: #F0E9DC;
   --champagne: #D9C9A8;
   --charcoal: #242220;
@@ -12,10 +12,10 @@
   --gold: #A88856;
   --gold-light: #C7AD7C;
   --white: #FFFFFF;
-   --red: #910303;
+  --red: #910303;
   --line: rgba(36,34,32,0.14);
   --line-on-dark: rgba(247,243,236,0.22);
-   
+
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
@@ -301,7 +301,7 @@ button{ font-family: inherit; cursor: pointer; }
 
 /* Countdown */
 .countdown-section{
-  background: var(--charcoal);
+  background: var(--red);
   color: var(--ivory);
 }
 .countdown{
@@ -405,7 +405,7 @@ button{ font-family: inherit; cursor: pointer; }
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: var(--charcoal);
+  background: var(--red);
   color: var(--ivory);
   border: 1px solid var(--charcoal);
   padding: 16px 28px;
@@ -440,7 +440,7 @@ button{ font-family: inherit; cursor: pointer; }
   min-height: 52px;
 }
 .btn-secondary:hover, .btn-secondary:focus-visible{
-  background: var(--charcoal);
+  background: var(--red);
   color: var(--ivory);
 }
 
@@ -462,6 +462,7 @@ button{ font-family: inherit; cursor: pointer; }
   font-family: var(--font-display);
   font-size: 1.4rem;
   margin: 0 0 8px;
+  color: var(--red);
 }
 .venue-address{
   color: var(--charcoal-soft);
@@ -642,7 +643,7 @@ button{ font-family: inherit; cursor: pointer; }
 }
 
 /* Closing */
-.closing{ background: var(--charcoal); color: var(--ivory); }
+.closing{ background: var(--red); color: var(--ivory); }
 .closing-frame{
   text-align: center;
   border: 1px solid var(--line-on-dark);
