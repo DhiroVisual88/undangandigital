@@ -6,14 +6,14 @@
    ============================================================ */
 
 const EVENT_CONFIG = {
-  birthdayPerson: "XXX",              // <-- Replace with the real name
+  birthdayPerson: "Yenni Alina",              // <-- Replace with the real name
   age: 50,
   date: "2026-09-05",                 // YYYY-MM-DD
   dateDisplay: "5 September 2026",    // Human-readable date shown on the page
   startTime: "18:00",                 // 24h HH:MM, event timezone
   endTime: "21:00",                   // 24h HH:MM, event timezone
   timezoneOffset: "+07:00",           // Asia/Jakarta (WIB, UTC+7) — fixed offset, no DST
-  venue: "Bandar Djakarta Alam Sutera",
+  venue: "Bandar Djakarta Alam Sutera | Ruang Bromo",
   address: "Flavor Bliss.3, Jl. Alam Sutera Boulevard Blok Kavling No.6, Pakulonan, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15325",
 
   // Gift section
@@ -25,7 +25,7 @@ const EVENT_CONFIG = {
   //    (see google-apps-script/Code.gs and README.md for steps).
   // 2) mapsUrl is generated automatically from `address` below, but you can
   //    hardcode a specific Google Maps place URL here instead if you prefer.
-  appsScriptUrl: "https://script.google.com/macros/s/AKfycbw-gKA17CwcKGCMV8ubdPcBso3h1_b8S7S-x1Yu-idsW7IbDVJp2APGCqNjd6k99siJ9w/exec",
+  appsScriptUrl: "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE",
   mapsUrl: "" // leave blank to auto-generate from the address
 };
 
