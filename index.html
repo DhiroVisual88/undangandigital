@@ -28,7 +28,7 @@
   </svg>
 </button>
 <audio id="bgMusic" loop preload="none">
-  <source src="assets/music/invitation-music.mp3" type="audio/mpeg">
+  <source src="SONG_HBD.mp3" type="audio/mpeg">
 </audio>
 
 <!-- ============ OPENING COVER ============ -->
@@ -37,7 +37,7 @@
     <p class="cover-eyebrow" data-anim="fade-up">You are cordially invited</p>
     <h1 class="cover-title" data-anim="fade-up" data-delay="1">50<span class="ordinal">th</span><br>Birthday Celebration</h1>
     <div class="cover-rule" data-anim="fade-up" data-delay="2"></div>
-    <p class="cover-name" id="coverName" data-anim="fade-up" data-delay="2">XXX</p>
+    <p class="cover-name" id="coverName" data-anim="fade-up" data-delay="2">Yenni alina</p>
     <p class="cover-date" data-anim="fade-up" data-delay="3">5 September 2026</p>
     <button id="openInvitation" class="btn-open" data-anim="fade-up" data-delay="4">
       <span>Open Invitation</span>
@@ -58,7 +58,7 @@
         of stories worth celebrating.
       </p>
       <p class="welcome-text welcome-text--sub">
-        Join us as we celebrate <span class="name-inline" data-field="birthdayPerson">XXX</span>'s 50th birthday —
+        Join us as we celebrate <span class="name-inline" data-field="birthdayPerson">Yenni Alina</span>'s 50th birthday —
         an evening of good food, warm company, and gratitude for the years behind us
         and those still to come.
       </p>
@@ -71,15 +71,15 @@
       <div class="person-grid">
         <div class="person-photo">
           <div class="photo-frame">
-            <img src="assets/images/celebrant.jpg" alt="Portrait of the birthday celebrant"
-                 loading="lazy" width="800" height="1000"
+            <img src="FOTO_MAMA.jpeg" alt="Portrait of the birthday celebrant"
+                 loading="lazy" width="1000" height="500"
                  onerror="this.parentElement.classList.add('photo-frame--empty'); this.remove();">
             <div class="photo-frame-caption">A milestone worth celebrating</div>
           </div>
         </div>
         <div class="person-copy">
           <p class="eyebrow">Guest of Honour</p>
-          <h2 class="person-name" data-field="birthdayPerson">XXX</h2>
+          <h2 class="person-name" data-field="birthdayPerson">Yenni Alina</h2>
           <p class="person-sub">50th Birthday Celebration</p>
           <div class="thin-rule"></div>
           <p class="person-text">
@@ -140,7 +140,7 @@
           <svg class="detail-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div>
             <p class="detail-label">Time</p>
-            <p class="detail-value">6:00 PM WIB</p>
+            <p class="detail-value">5:00 PM WIB</p>
           </div>
         </div>
         <div class="detail-row">
@@ -163,7 +163,7 @@
       <p class="eyebrow">Location</p>
       <h2 class="section-title">Where We Celebrate</h2>
       <div class="venue-card">
-        <p class="venue-name" data-field="venue">Bandar Djakarta Alam Sutera</p>
+        <p class="venue-name" data-field="venue">Bandar Djakarta Alam Sutera | Ruang Bromo</p>
         <p class="venue-address" data-field="address">Flavor Bliss.3, Jl. Alam Sutera Boulevard Blok Kavling No.6, Pakulonan, Kec. Serpong Utara, Kota Tangerang Selatan, Banten 15325</p>
         <a id="mapsLink" class="btn-secondary btn-block" href="#" target="_blank" rel="noopener noreferrer">View Location</a>
       </div>
@@ -229,7 +229,7 @@
     <div class="container narrow">
       <p class="eyebrow">From Our Guests</p>
       <h2 class="section-title">Birthday Wishes</h2>
-      <p class="section-subtitle">Leave a little love for <span data-field="birthdayPerson">XXX</span> on this special milestone.</p>
+      <p class="section-subtitle">Leave a little love for <span data-field="birthdayPerson">Yenni Alina</span> on this special milestone.</p>
 
       <div id="wishesList" class="wishes-list" aria-live="polite">
         <p class="wishes-loading" id="wishesLoading">Loading wishes…</p>
@@ -237,31 +237,6 @@
     </div>
   </section>
 
-  <!-- Gift -->
-  <section class="section gift" data-reveal>
-    <div class="container narrow">
-      <p class="eyebrow">A Small Note</p>
-      <h2 class="section-title">Wanna give us some gifts?</h2>
-      <p class="gift-intro">
-        Your presence is truly the only gift we ask for. For those who wish to send a
-        token of love, a small note is shared below.
-      </p>
-      <div class="menu-card gift-card">
-        <div class="gift-row">
-          <p class="detail-label">Bank Account Number</p>
-          <div class="gift-account">
-            <span id="accountNumber" data-field="bankAccount">1234 5678 9012</span>
-            <button id="copyAccountBtn" class="btn-copy" aria-label="Copy account number">Copy Account Number</button>
-          </div>
-          <p id="copyConfirm" class="copy-confirm" hidden>Account number copied!</p>
-        </div>
-        <div class="gift-row">
-          <p class="detail-label">Gift Delivery Address</p>
-          <p class="detail-value" data-field="giftAddress">XXX</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Closing -->
   <section class="section closing" data-reveal>
@@ -272,7 +247,7 @@
           love, and warm wishes mean more than words can say.
         </p>
         <p class="closing-date">See you on 5 September 2026</p>
-        <p class="closing-signature">With love,<br><span data-field="birthdayPerson">XXX</span> &amp; Family</p>
+        <p class="closing-signature">With love,<br><span data-field="birthdayPerson">Yenni Alina</span> &amp; Family</p>
       </div>
     </div>
   </section>
