@@ -316,7 +316,7 @@ async function loadWishes(){
   const list = document.getElementById("wishesList");
 
   try {
-    if (!EVENT_CONFIG.appsScriptUrl || EVENT_CONFIG.appsScriptUrl.includes("PASTE_YOUR")){
+    if (!EVENT_CONFIG.appsScriptUrl || EVENT_CONFIG.appsScriptUrl.includes("appsScriptUrl: "https://script.google.com/macros/s/AKfycbw-gKA17CwcKGCMV8ubdPcBso3h1_b8S7S-x1)...")){
       throw new Error("not configured");
     }
 
