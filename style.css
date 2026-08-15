@@ -125,6 +125,8 @@ button{ font-family: inherit; cursor: pointer; }
   font-size: 1.8rem;
   color: var(--white); /* Akan jadi warna putih agar stand out di atas merah */
   font-weight: 400;
+  margin-top: 0px; /* <--- TAMBAHKAN KODE INI DI SINI */
+  margin-bottom: 0px; /* (Opsional) Tambahkan ini juga jika bawahnya masih terlalu lebar */
 }
 
 .cover-bg{
