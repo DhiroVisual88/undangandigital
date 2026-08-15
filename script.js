@@ -440,3 +440,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.body.style.overflow = "hidden"; // lock scroll behind the cover
 });
+// Fitur Nama Tamu Otomatis dari URL
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const nameFromUrl = urlParams.get('to');
+    
+    if (nameFromUrl) {
+        document.getElementById('guest-name').innerText = nameFromUrl;
+    }
+});
