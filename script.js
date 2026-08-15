@@ -25,7 +25,7 @@ const EVENT_CONFIG = {
   //    (see google-apps-script/Code.gs and README.md for steps).
   // 2) mapsUrl is generated automatically from `address` below, but you can
   //    hardcode a specific Google Maps place URL here instead if you prefer.
-  appsScriptUrl: "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE",
+  appsScriptUrl: "https://script.google.com/macros/s/AKfycbw-gKA17CwcKGCMV8ubdPcBso3h1_b8S7S-x1Yu-idsW7IbDVJp2APGCqNjd6k99siJ9w/exec",
   mapsUrl: "" // leave blank to auto-generate from the address
 };
 
