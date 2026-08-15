@@ -316,7 +316,7 @@ async function loadWishes(){
   const list = document.getElementById("wishesList");
 
   try {
-    if (!EVENT_CONFIG.appsScriptUrl || EVENT_CONFIG.appsScriptUrl.includes("appsScriptUrl: "")){
+    if (!EVENT_CONFIG.appsScriptUrl || EVENT_CONFIG.appsScriptUrl.includes("PASTE_YOUR")){
       throw new Error("not configured");
     }
 
