@@ -108,6 +108,25 @@ button{ font-family: inherit; cursor: pointer; }
   padding: 40px 24px;
 }
 
+.guest-greeting {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.guest-label {
+  font-size: 1rem;
+  color: var(--ivory); /* Atau sesuaikan dengan warna yang pas */
+  margin-bottom: 4px;
+}
+
+.guest-value {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--white); /* Akan jadi warna putih agar stand out di atas merah */
+  font-weight: 400;
+}
+
 .cover-bg{
   position:absolute; inset:0;
   background:
